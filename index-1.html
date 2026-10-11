@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Por Você Locações • Vamos conversar?</title>
+<meta name="description" content="Decoração de festas e locações. Conta pra gente o que você precisa e fale direto com a Inglidy no WhatsApp.">
+<meta property="og:title" content="Por Você Locações • Vamos conversar?">
+<meta property="og:description" content="Decoração de festas e locações. Mais que um momento, um laço de amor!">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Great+Vibes&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6e6e4;--card:#fffaf9;--ink:#3f2d22;--soft:#86695f;--pri:#c98f93;--pri2:#5a4030;--gold:#b98a5a;--line:#e6cccc;--chip:#f9e4e4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1a1e;--card:#3a252b;--ink:#fbeaea;--soft:#c9a9ae;--line:#57383f;--chip:#4a2d35}}
+:root[data-theme="dark"]{--bg:#2a1a1e;--card:#3a252b;--ink:#fbeaea;--soft:#c9a9ae;--line:#57383f;--chip:#4a2d35}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;font-size:17px;line-height:1.45}
+main{max-width:520px;margin:0 auto;padding:20px 18px 40px}
+header{text-align:center;padding:10px 0 18px}
+h2{font-family:'Playfair Display',Georgia,serif}
+.logo{width:118px;height:118px;border-radius:50%;background:#e8c6c6;margin:0 auto 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(90,64,48,.15);position:relative}
+.logo b{font-family:'Playfair Display',Georgia,serif;font-size:54px;line-height:.9;color:#5a4030;font-weight:700}
+.logo i{font-family:'Great Vibes',cursive;font-style:normal;font-size:26px;color:#5a4030;margin-top:-4px}
+.logo .bl{position:absolute;top:8px;right:12px;font-size:20px}
+.brand{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--pri2);margin:0;line-height:1.2}
+.brand small{display:block;font-family:'Quicksand',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:4px}
+.tag{font-family:'Playfair Display',Georgia,serif;font-style:italic;color:var(--soft);margin:8px 0 0;font-size:16px}
+.bar{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin:6px 0 22px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pri),var(--gold));transition:width .4s}
+.step{display:none;animation:in .35s ease}
+.step.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h2{font-size:23px;margin:0 0 6px}
+.hint{color:var(--soft);margin:0 0 16px;font-size:15px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px 16px;font:inherit;color:inherit;font-weight:600;text-align:left;cursor:pointer;width:100%;transition:.15s}
+.opt .e{font-size:24px}
+.opt:active{transform:scale(.98)}
+.opt.sel{border-color:var(--pri);background:var(--chip)}
+.grid2{grid-template-columns:1fr 1fr}
+.grid2 .opt{flex-direction:column;text-align:center;padding:18px 10px}
+.stepper{display:flex;align-items:center;justify-content:center;gap:22px;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:16px;margin:8px 0}
+.stepper button{width:48px;height:48px;border-radius:50%;border:0;background:var(--pri);color:#fff;font-size:26px;font-weight:700;cursor:pointer}
+.stepper b{font-size:36px;min-width:60px;text-align:center}
+label{display:block;font-weight:700;margin:14px 0 6px}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:14px;padding:13px 14px}
+input:focus,textarea:focus{outline:none;border-color:var(--pri)}
+.nav{display:flex;gap:10px;margin-top:22px}
+.btn{flex:1;border:0;border-radius:999px;padding:15px 20px;font:inherit;font-weight:700;font-size:17px;cursor:pointer}
+.next{background:var(--pri2);color:#fff}
+.next:disabled{opacity:.4;cursor:not-allowed}
+.back{background:transparent;color:var(--soft);flex:0 0 auto;border:2px solid var(--line)}
+.wa{background:#25a65b;color:#fff;display:block;text-align:center;text-decoration:none}
+.sum{background:var(--card);border:2px dashed var(--pri);border-radius:18px;padding:16px;margin:12px 0}
+.sum p{margin:6px 0}
+.sum span{color:var(--soft);font-size:14px;display:block}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1 class="brand">Por Você Locações<small>Decoração de festas · Desde 2012</small></h1>
+  <p class="tag">Mais que um momento, um laço de amor!</p>
+</header>
+<div class="bar"><i id="bar"></i></div>
+
+<section class="step on" id="s0">
+  <h2>Oi! Que bom ter você aqui 💕</h2>
+  <p class="hint">Em que podemos te ajudar? Pode escolher mais de uma opção, se quiser! 😉</p>
+  <div class="opts grid2" id="servicos"><button class="opt" data-svc="Decoração"><span class="e">🎈</span>Decoração</button><button class="opt" data-svc="Aluguel de mesas"><span class="e">🪑</span>Aluguel de mesas</button><button class="opt" data-svc="Aluguel de tendas"><span class="e">⛺</span>Aluguel de tendas</button><button class="opt" data-svc="Aluguel de brinquedos"><span class="e">🎠</span>Aluguel de brinquedos</button></div>
+  <div class="nav"><button class="btn next" id="n0" disabled>Continuar</button></div>
+</section>
+
+<section class="step" id="s1">
+  <p class="hint" id="cnt" style="margin:0 0 4px;font-weight:700;color:var(--gold)"></p>
+  <h2 id="t1"></h2>
+  <p class="hint" id="h1"></p>
+  <div id="c1"></div>
+  <div class="nav"><button class="btn back" data-back>Voltar</button><button class="btn next" id="n1" disabled>Continuar</button></div>
+</section>
+
+<section class="step" id="s2">
+  <h2>Pra quando seria? 🗓️</h2>
+  <p class="hint">Escolha a data do seu evento. Vamos conferir se está disponível!</p>
+  <input type="date" id="data">
+  <div class="nav"><button class="btn back" data-back>Voltar</button><button class="btn next" id="n2" disabled>Continuar</button></div>
+</section>
+
+<section class="step" id="s3">
+  <h2>Pra onde seria? 📍</h2>
+  <p class="hint">Conta pra gente o endereço (ou bairro e cidade) pra calcularmos tudo certinho.</p>
+  <label for="nome">Como podemos te chamar?</label>
+  <input id="nome" placeholder="Seu nome" autocomplete="given-name">
+  <label for="end">Endereço do evento</label>
+  <textarea id="end" rows="3" placeholder="Rua, número, bairro e cidade"></textarea>
+  <div class="nav"><button class="btn back" data-back>Voltar</button><button class="btn next" id="n3" disabled>Revisar</button></div>
+</section>
+
+<section class="step" id="s4">
+  <h2>Tudo certo? 🎉</h2>
+  <p class="hint">Confira o resumo. Ao tocar no botão, abrimos o WhatsApp com tudo pronto pra enviar pra gente.</p>
+  <div class="sum" id="sum"></div>
+  <a class="btn wa" id="wa" target="_blank" rel="noopener">Enviar pelo WhatsApp 💬</a>
+  <div class="nav"><button class="btn back" data-back style="flex:1">Voltar e ajustar</button></div>
+</section>
+</main>
+
+<script>
+// ✏️ TROQUE PELO NÚMERO DA INGLIDY: 55 + DDD + número, só dígitos (ex.: 5511999999999)
+const WHATSAPP = "558388664098";
+
+const S = {
+  "Decoração": {e:"🎈", t:"Qual o tipo de decoração?", h:"Escolha o que mais combina com o seu momento.", type:"one", label:"Tipo de decoração",
+    o:[["🧸","Festa infantil"],["🥂","Festa"],["💍","Casamento"],["💌","Noivado"],["🕊️","Batizado"],["🍽️","Confraternização"],["✨","Momento especial"]]},
+  "Aluguel de mesas": {e:"🪑", t:"Quantos conjuntos você precisa?", h:"Cada conjunto = 1 mesa e 4 cadeiras.", type:"qty", label:"Conjuntos (1 mesa + 4 cadeiras)"},
+  "Aluguel de tendas": {e:"⛺", t:"Qual o tamanho você procura?", h:"Escolha o tamanho da tenda.", type:"one", label:"Tamanho da tenda",
+    o:[["⛺","4x4"],["⛺","5x5"]]},
+  "Aluguel de brinquedos": {e:"🎠", t:"Quais brinquedos vão animar a festa?", h:"Pode escolher mais de um!", type:"multi", label:"Brinquedos",
+    o:[["🛝","Escorregador inflável"],["<svg width='28' height='28' viewBox='0 0 32 32'><g stroke='#b98a5a' stroke-width='2.4' stroke-linecap='round'><line x1='7' y1='25' x2='25' y2='7'/><line x1='7' y1='7' x2='25' y2='25'/></g><g fill='#fff' stroke='#5a4030' stroke-width='1.2'><circle cx='5' cy='27' r='3'/><circle cx='27' cy='5' r='3'/><circle cx='5' cy='5' r='3'/><circle cx='27' cy='27' r='3'/></g></svg>","Guerra de cotonetes"],["🤸","Pula-pula"],["🔴","Casa de bolinhas"]]}
+};
+let st = {svcs:[], i:0, step:0, d:{}};
+const $ = id => document.getElementById(id);
+const keys = Object.keys(S);
+
+$("servicos").onclick = e => { const b=e.target.closest("[data-svc]"); if(!b) return; b.classList.toggle("sel");
+  st.svcs=[...$("servicos").querySelectorAll(".sel")].map(x=>x.dataset.svc); $("n0").disabled=!st.svcs.length; };
+$("n0").onclick=()=>{st.i=0;build();go(1)};
+
+function build(){
+  const k=st.svcs[st.i], c=S[k], tot=st.svcs.length; st.d[k]=st.d[k]||{pick:[],qty:1}; const cur=st.d[k];
+  $("cnt").textContent = tot>1 ? `Pergunta ${st.i+1} de ${tot} · ${k}` : k;
+  $("t1").textContent=c.t; $("h1").textContent=c.h; const box=$("c1"), n=$("n1");
+  if(c.type==="qty"){
+    box.innerHTML=`<div class="stepper"><button id="m">−</button><b id="q">${cur.qty}</b><button id="p">+</button></div>`; box.onclick=null; n.disabled=false;
+    $("m").onclick=()=>{cur.qty=Math.max(1,cur.qty-1);$("q").textContent=cur.qty};
+    $("p").onclick=()=>{cur.qty=Math.min(99,cur.qty+1);$("q").textContent=cur.qty};
+  } else {
+    box.innerHTML=`<div class="opts">`+c.o.map(([e,t])=>`<button class="opt${cur.pick.includes(t)?" sel":""}" data-v="${t}"><span class="e">${e}</span>${t}</button>`).join("")+`</div>`;
+    n.disabled=!cur.pick.length;
+    box.onclick=ev=>{const b=ev.target.closest("[data-v]"); if(!b) return; const v=b.dataset.v;
+      if(c.type==="one"){cur.pick=[v]; box.querySelectorAll(".opt").forEach(x=>x.classList.toggle("sel",x===b));}
+      else{ b.classList.toggle("sel"); cur.pick=[...box.querySelectorAll(".sel")].map(x=>x.dataset.v); }
+      n.disabled=!cur.pick.length;};
+  }
+}
+
+function go(i){
+  st.step=i; document.querySelectorAll(".step").forEach((s,j)=>s.classList.toggle("on",j===i));
+  const tot=Math.max(1,st.svcs.length), pos=[0,1+st.i,1+tot,2+tot,3+tot][i];
+  $("bar").style.width=(pos/(3+tot)*100)+"%"; window.scrollTo({top:0,behavior:"smooth"});
+}
+function back(){
+  if(st.step===1){ if(st.i>0){st.i--;build();go(1)} else go(0); }
+  else if(st.step===2){ st.i=st.svcs.length-1; build(); go(1); }
+  else go(st.step-1);
+}
+document.querySelectorAll("[data-back]").forEach(b=>b.onclick=back);
+$("n1").onclick=()=>{ if(st.i<st.svcs.length-1){st.i++;build();go(1)} else go(2); };
+$("n2").onclick=()=>go(3);
+$("n3").onclick=()=>{summary();go(4)};
+
+const d=$("data"); const t=new Date(); t.setMinutes(t.getMinutes()-t.getTimezoneOffset()); d.min=t.toISOString().slice(0,10);
+d.oninput=()=>$("n2").disabled=!d.value;
+const chk=()=>$("n3").disabled=!($("nome").value.trim()&&$("end").value.trim().length>5);
+$("nome").oninput=chk; $("end").oninput=chk;
+
+function fmtDate(v){const [y,m,dd]=v.split("-");return `${dd}/${m}/${y}`}
+function detail(k){const c=S[k], x=st.d[k]; return c.type==="qty" ? `${x.qty} ${x.qty>1?"conjuntos":"conjunto"} (1 mesa + 4 cadeiras)` : x.pick.join(", ");}
+
+function summary(){
+  const nome=$("nome").value.trim(), end=$("end").value.trim(), dt=fmtDate(d.value);
+  $("sum").innerHTML=st.svcs.map(k=>`<p><span>${k}</span>${detail(k)}</p>`).join("")+`<p><span>Data</span>${dt}</p><p><span>Local</span>${end}</p><p><span>Nome</span>${nome}</p>`;
+  const lines=st.svcs.map(k=>`• *${k}:* ${detail(k)}`).join("\n");
+  const msg=`Oi, Inglidy! Tudo bem? 💕\nVim pelo link de atendimento e gostaria de um orçamento:\n\n${lines}\n\n*Data:* ${dt}\n*Local:* ${end}\n*Nome:* ${nome}\n\nFico no aguardo! 😊`;
+  $("wa").href=`https://wa.me/${WHATSAPP.replace(/\D/g,"")}?text=${encodeURIComponent(msg)}`;
+}
+</script>
+</body>
+</html>
